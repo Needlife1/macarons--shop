@@ -3,6 +3,7 @@ import viteImagemin from 'vite-plugin-imagemin';
 import postcssConfig from './postcss.config.ts';
 
 export default defineConfig({
+  base: './',
   plugins: [
     viteImagemin({
       gifsicle: { optimizationLevel: 7, interlaced: false },
