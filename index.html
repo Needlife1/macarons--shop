@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,14 +9,195 @@
 </head>
 
 <body>
-  <div class="w-44 h-48 mx-auto">
-    <img src="./src/img/IMG_3312.JPG" alt="test">
-    <svg width="24" height="24">
-      <use href="./src/img/pop.svg#pop"></use>
-    </svg>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui recusandae est vitae a consectetur iusto placeat
-      reprehenderit
-      vel nam deserunt ipsa sint, rem delectus id modi velit officiis corrupti voluptate.</p>
+  <header>
+    <nav class="nav">
+
+      <ul class="nav-list main-grid">
+
+        <li class="nav-logo mob-logo">
+          <a class="nav-logo-link" href="">
+            <img class="nav-logo-img" src="./src/img/logo.png" alt="logo" width="55" height="55">
+            <p class="nav-logo-text">Chervona panda</p>
+          </a>
+
+          <button class="nav-basket-btn" type="button">
+            <svg svg class="nav-basket-svg" id='basket' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              width="100%" height="100%">
+              <path
+                d="M16,6V4a4,4,0,0,0-8,0V6H4V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V6Zm-6-2a2,2,0,0,1,4,0V6H10ZM18,20H6V8H8v2a1,1,0,0,0,2,0V8h4v2a1,1,0,0,0,2,0V8h2Z" />
+            </svg>
+            <span class="nav-basket-item">10</span>
+          </button>
+        </li>
+
+        <li class="nav-item macarons">
+          <a class="nav-link" href="">
+            <img class="nav-img" src="./src/img/macarons-mob.jpg" alt="mochi" width="320" height="200">
+            <p class="nav-text">макаруны</p>
+          </a>
+
+        </li>
+
+        <li class="nav-item mochi">
+
+          <a class="nav-link" href="">
+            <img class="nav-img" src="./src/img/photo_2024-06-21_09-36-16.jpg" alt="mochi" width="320" height="200">
+            <p class="nav-text">моті</p>
+          </a>
+
+        </li>
+
+        <li class="nav-item other">
+
+          <a class="nav-link" href="">
+            <img class="nav-img" src="./src/img/photo_2024-06-21_09-36-02.jpg" alt="mochi" width="320" height="200">
+            <p class="nav-text">різне</p>
+          </a>
+
+        </li>
+
+        <li class="nav-item video">
+
+
+          <video width="300" controls autoplay loop muted poster="path/to/poster.jpg">
+            <source src="path/to/video.mp4" type="video/mp4">
+            <source src="path/to/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+
+
+        </li>
+
+        <li class="nav-item contacts">
+
+          <a class="nav-link hover" href="">
+            <p class="nav-text ">контакти</p>
+          </a>
+
+        </li>
+
+        <li class="nav-item reviews">
+
+          <a class="nav-link hover" href="">
+            <p class="nav-text">відгуки</p>
+          </a>
+
+        </li>
+
+        <li class="nav-item info">
+
+          <a class="nav-link hover" href="">
+            <p class="nav-text">інформація</p>
+          </a>
+
+        </li>
+
+        <li class="nav-item thematic">
+
+          <a class="nav-link" href="">
+            <img class="nav-img" src="./src/img/thematic.jpg" alt="mochi" width="320" height="200">
+            <p class="nav-text">тематичні набори</p>
+          </a>
+
+        </li>
+
+      </ul>
+
+      <ul class="mob-nav-list">
+        <li class="mob-nav-item item-top"><a class="mob-nav-link" href=""><span>к</span> <span>о</span>
+            <span>н</span><span>т</span><span>а</span><span>к</span><span>т</span><span>и</span></a></li>
+
+        <li class="mob-nav-item item-bottom"><a class="mob-nav-link" href=""><span>і</span> <span>н</span>
+            <span>ф</span><span>о</span></a>
+        </li>
+
+        <li class="mob-nav-item item-midel"><a class="mob-nav-link" href=""><span>в</span> <span>і</span>
+            <span>д</span><span>г</span><span>у</span><span>к</span><span>и</span></a></li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <div class="backdrop animated-closing closed visually-hidden">
+
+    <div class="basket">
+
+      <div class="basket-heder">
+
+        <div style="width: 100%; height: 15px; background-color: #f96d33; position: absolute; top: -1px; left: -1px;">
+        </div>
+
+        <p class="basket-heder-text">Кошик</p>
+
+        <button class="basket-close-btn">
+          <svg id="closeModal" viewBox="0 0 32 32" width="32" height="32">
+            <use href="./src/img/close.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <table class="basket-table">
+
+        <tbody>
+          <tr class="basket-table-item">
+            <td class="item-remove">
+              <button class="item-remove-btn" type="button">
+                <svg id="closeModal" viewBox="0 0 32 32" width="16" height="16">
+                  <use href="./src/img/close.svg#icon-close"></use>
+                </svg>
+              </button>
+            </td>
+
+            <td class="item-img">
+              <a href="#">
+                <img src="./src/img/mochi.jpg" alt="product" decoding="async" width="500" height="500">
+              </a>
+            </td>
+
+            <td class="item-name">
+              <a href="">Торт "Happy Birthday" карамель+арахіс</a>
+            </td>
+
+            <td class="item-price">
+              <span data-title="Ціна(1шт)"></span><span>999грн</span>
+            </td>
+
+            <td class="item-quantity">
+              <span data-title="Кількість"></span>
+              <div class="quantity">
+                <button class="decrease counter">
+                  <svg width="12" height="12">
+                    <use href="./src/img/minus.svg#icon-minus"></use>
+                  </svg>
+                </button>
+                <div class="number counter">100</div>
+                <button class="increase counter"><svg width="12" height="12">
+                    <use href="./src/img/plus.svg#icon-plus"></use>
+                  </svg>
+                </button>
+              </div>
+            </td>
+
+            <td class="item-subtotal">
+              <span data-title="Сума"></span>
+              <span class="subtotal">999грн</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="basket-footer">
+        <div class="basket-footer-ptice"><span>Сума замовлення: </span>999 грн</div>
+        <div class="basket-footer-box">
+          <button class="basket-footer-btn">Продовжити покупку</button>
+          <a class="checkout basket-footer-btn" href="">Перейти до оформлення</a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
   <script type="module" src="./src/main.ts"></script>
 </body>
