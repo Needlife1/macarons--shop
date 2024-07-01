@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite';
+import { fileURLToPath } from 'url';
 import viteImagemin from 'vite-plugin-imagemin';
 import postcssConfig from './postcss.config.ts';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
+import glob from 'fast-glob';
+
+const urlToPath = (url) => fileURLToPath(new URL(url));
 
 export default defineConfig({
   base: './',
@@ -22,5 +26,22 @@ export default defineConfig({
   ],
   css: {
     postcss: postcssConfig,
+  },
+  build: {
+    minify: false,
+    rollupOptions: {
+      input: Object.fromEntries(
+        glob
+          .sync(['./*.html', './pages/**/*.html'])
+          .map((file) => [
+            file.slice(0, file.lastIndexOf('.')),
+            urlToPath(new URL(file, import.meta.url)),
+          ]),
+      ),
+
+      output: {
+        assetFileNames: 'assets/[name].[ext]',
+      },
+    },
   },
 });
