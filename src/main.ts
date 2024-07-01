@@ -1,3 +1,3 @@
 import './main.css';
 
-import './ts/basket';
+import './ts/basket-open';

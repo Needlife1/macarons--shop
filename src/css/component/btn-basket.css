@@ -1,0 +1,51 @@
+.nav-basket-btn {
+    display: inline-block;
+    position: relative;
+
+
+}
+
+.nav-basket-btn:hover .nav-basket-svg,
+.nav-basket-btn:focus .nav-basket-svg {
+    fill: var(--accent-color);
+}
+
+.nav-basket-btn:hover .nav-basket-item,
+.nav-basket-btn:focus .nav-basket-item {
+    background-color: var(--gray-primarily);
+}
+
+.nav-basket-svg {
+    width: 34px;
+    height: 34px;
+    fill: var(--gray-primarily);
+    transition: fill 0.3s ease;
+
+    @media (min-width: 1200px) {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.nav-basket-item {
+    font-family: 'Roboto Slab';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 2px;
+    right: -2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    @media (min-width: 1200px) {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+    }
+}

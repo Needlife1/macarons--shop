@@ -3,9 +3,17 @@
 @import './css/base/base.css';
 @import './css/base/root.css';
 
+@import './css/component/logo.css';
+@import './css/component/btn-basket.css';
+@import './css/component/header.css';
 
-@import './css/nav.css';
+@import './css/layout/nav.css';
+@import './css/component/breadcrumbs.css';
+@import './css/component/section.css';
+
+@import './css/layout/contacts.css';
 
 
 @import './css/base/animated-closing.css';
 @import './css/component/basket.css';
+@import './css/component/product-card.css'

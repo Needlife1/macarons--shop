@@ -1,0 +1,33 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo:hover .logo-img,
+.logo:focus .logo-img {
+    transform: scale(1.4);
+}
+
+.logo-img {
+    filter: brightness(0.9);
+    transition: transform 0.2s ease;
+
+    @media (min-width: 1200px) {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--accent-color);
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 46px;
+    }
+}

@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 import viteImagemin from 'vite-plugin-imagemin';
 import postcssConfig from './postcss.config.ts';
+import injectHTML from 'vite-plugin-html-inject';
+import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig({
   base: './',
@@ -15,6 +17,8 @@ export default defineConfig({
       },
       webp: { quality: 75 },
     }),
+    injectHTML(),
+    FullReload(['./src/**/**.html', './src/**/*.css']),
   ],
   css: {
     postcss: postcssConfig,

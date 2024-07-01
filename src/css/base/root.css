@@ -6,5 +6,6 @@
     --accent-color-secondarily: #dfa297;
     --green-primarily: #42900e;
     --gray-primarily: rgb(101, 99, 99);
+    --gray-secondarily: #bebebe;
     --backdrop-bg: rgba(0, 0, 0, 0.5);
 }
