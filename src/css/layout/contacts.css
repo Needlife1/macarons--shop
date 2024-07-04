@@ -22,7 +22,7 @@
 
     @media (min-width:1200px) {
         width: 40%;
-        height: 60%;
+        height: 70%;
     }
 }
 
@@ -110,12 +110,40 @@
 .contacts-phone {
     display: flex;
     align-items: center;
+    transition: filter 0.3s ease;
+
+    @media (min-width:768px) {
+
+        &:hover,
+        &:focus {
+            filter: brightness(1.5);
+        }
+    }
+
 
     &>svg {
-        stroke: #f96d33;
+        stroke: var(--green-primarily);
 
     }
+
+
 }
+
+
+.contacts-address {
+    transition: color 0.3s ease;
+
+    @media (min-width:768px) {
+
+        &:hover,
+        &:focus {
+            color: var(--green-primarily);
+        }
+    }
+
+}
+
+
 
 
 .contact-text {
