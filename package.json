@@ -21,13 +21,11 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-html": "^3.2.2",
     "vite-plugin-html-template": "^1.2.2",
     "vite-plugin-imagemin": "^0.6.1"
   },
   "dependencies": {
     "fast-glob": "^3.3.2",
-    "glob": "^10.4.2",
     "vite-plugin-full-reload": "^1.1.0",
     "vite-plugin-html-inject": "^1.1.2"
   }

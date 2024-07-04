@@ -1,5 +1,29 @@
 .contacts {
-    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    text-align: center;
+    background-color: var(--light-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--dark-primary);
+    z-index: 6;
+    overflow-y: hidden;
+
+    @media (min-width:768px) {
+        border-radius: 30px;
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (min-width:1200px) {
+        width: 40%;
+        height: 60%;
+    }
 }
 
 .contacts-heder {
@@ -36,4 +60,64 @@
     &:focus {
         transform: scale(1.1);
     }
+}
+
+.contacts-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+
+    @media (min-width:768px) {
+        margin-top: 35px;
+    }
+
+    @media (min-width:1200px) {
+        margin-top: 25px;
+    }
+}
+
+
+.contacts-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width:768px) {
+        flex-direction: row;
+    }
+}
+
+.contacts-logo-img {
+    width: 95px;
+    height: 100px;
+
+}
+
+.contacts-logo-text {
+    font-size: 45px;
+}
+
+.contacts-phone {
+    display: flex;
+    align-items: center;
+
+    &>svg {
+        stroke: #f96d33;
+
+    }
+}
+
+
+.contact-text {
+    font-size: 15px;
 }

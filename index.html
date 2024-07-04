@@ -70,9 +70,9 @@
 
       <li class="nav-item contact">
 
-        <a class="nav-link hover" href="./src/partials/contacts.html">
+        <button type="button" id="open-contacts">
           <p class="nav-text ">контакти</p>
-        </a>
+        </button>
 
       </li>
 
@@ -104,8 +104,9 @@
     </ul>
 
     <ul class="mob-nav-list">
-      <li class="mob-nav-item item-top"><a class="mob-nav-link" href=""><span>к</span> <span>о</span>
-          <span>н</span><span>т</span><span>а</span><span>к</span><span>т</span><span>и</span></a></li>
+      <li class="mob-nav-item item-top"><button class="mob-nav-link" id="open-contacts"><span>к</span>
+          <span>о</span>
+          <span>н</span><span>т</span><span>а</span><span>к</span><span>т</span><span>и</span></button></li>
 
       <li class="mob-nav-item item-bottom"><a class="mob-nav-link" href=""><span>і</span> <span>н</span>
           <span>ф</span><span>о</span></a>
@@ -122,8 +123,12 @@
 
   <div class="backdrop">
   </div>
-  <load src="./src/partials/components/basket.html" />
+  <div class="position-container">
 
+    <load src="./src/partials/components/basket.html" />
+    <load src="./src/partials/contacts.html" />
+
+  </div>
   <script type="module" src="./src/main.ts"></script>
 
 </body>

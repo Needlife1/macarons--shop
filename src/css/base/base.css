@@ -1,7 +1,6 @@
 body {
     width: 100vw;
-    height: 100vh;
-    padding: 10px 10px;
+    /* height: 100vh; */
     background-color: #ffff;
     color: azure;
     font-family: 'Amatic SC', sans-serif;
