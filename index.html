@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title></title>
-  <script type="module" crossorigin src="./assets/main-DHsS2nMt.js"></script>
+  <script type="module" crossorigin src="./assets/main-BCrY7bXM.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/main.css">
 </head>
 
@@ -72,9 +72,9 @@
 
       <li class="nav-item contact">
 
-        <a class="nav-link hover" href="./src/partials/contacts.html">
+        <button type="button" id="open-contacts">
           <p class="nav-text ">контакти</p>
-        </a>
+        </button>
 
       </li>
 
@@ -106,8 +106,9 @@
     </ul>
 
     <ul class="mob-nav-list">
-      <li class="mob-nav-item item-top"><a class="mob-nav-link" href=""><span>к</span> <span>о</span>
-          <span>н</span><span>т</span><span>а</span><span>к</span><span>т</span><span>и</span></a></li>
+      <li class="mob-nav-item item-top"><button class="mob-nav-link" id="open-contacts"><span>к</span>
+          <span>о</span>
+          <span>н</span><span>т</span><span>а</span><span>к</span><span>т</span><span>и</span></button></li>
 
       <li class="mob-nav-item item-bottom"><a class="mob-nav-link" href=""><span>і</span> <span>н</span>
           <span>ф</span><span>о</span></a>
@@ -124,7 +125,9 @@
 
   <div class="backdrop">
   </div>
-  <div class="basket animated-closing closed visually-hidden">
+  <div class="position-container">
+
+    <div class="basket animated-closing closed visually-hidden">
 
   <div class="basket-heder">
 
@@ -147,10 +150,10 @@
   </div>
 
   <div class="basket-box">
-    <!-- <table class="basket-table">
+    <table class="basket-table">
 
       <tbody>
-        <tr class="basket-table-item">
+        <!-- <tr class="basket-table-item">
           <td class="item-remove">
             <button class="item-remove-btn" type="button">
               <svg id="closeModal" viewBox="0 0 32 32" width="16" height="16">
@@ -193,9 +196,11 @@
             <span data-title="Сума"></span>
             <span class="subtotal">999грн</span>
           </td>
-        </tr>
+        </tr> -->
+
+
       </tbody>
-    </table> -->
+    </table>
   </div>
 
   <div class="basket-footer">
@@ -207,7 +212,81 @@
 
   </div>
 </div>
+    <div class="contacts animated-closing closed visually-hidden">
+    <div class="contacts-heder">
+        <div style="width: 100%; height: 15px; background-color: #f96d33; position: absolute; top: -1px; left: -1px;">
+        </div>
 
+        <p class="contacts-heder-text">Контакти</p>
+
+        <button class="contacts-close-btn" id="contacts-close-btn">
+            <svg id="closeModal" viewBox="0 0 32 32" width="32" height="32">
+                <use href="./assets/close.svg#icon-close"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="contacts-box">
+
+        <div class="contacts-logo">
+            <img class="contacts-logo-img" src="./assets/logo.png" alt="logo" width="55" height="55">
+            <p class="contacts-logo-text">Chervona panda</p>
+        </div>
+
+        <div class="contacts-work-time">Режим роботи: ПН - НД, <br>з 10:00 до 19:00</div>
+
+
+
+        <ul class="contacts-phones">
+            <li><a class="contacts-phone" href="tel:+380502336183">
+                    <svg width="32" height="32">
+                        <use href="./assets/phone.svg#phone"></use>
+                    </svg>
+
+                    +380502336183</a></li>
+            <li><a class="contacts-phone" href="tel:+380502336183">
+                    <svg width="32" height="32">
+                        <use href="./assets/phone.svg#phone"></use>
+                    </svg>
+                    +380502336183</a></li>
+        </ul>
+
+        <a class="contacts-address" href="https://maps.app.goo.gl/oUpTcstF7WAaRC6X8" target="_blank"
+            rel="nofollow noopener noreferrer">Україна, м.Харків</a>
+
+
+
+        <ul class="socail-media">
+            <li>
+                <a href="#">
+                    <svg width="20" height="20">
+                        <use href="./assets/instagram.svg#instagram"></use>
+                    </svg>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <svg width="20" height="20">
+                        <use href="./assets/telegram.svg#telegram"></use>
+                    </svg>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <svg width="20" height="20">
+                        <use href="./assets/email.svg#email"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+
+        <p class="contact-text">© Интернет-магазин «Chervona panda ™» 2023-2024</p>
+
+    </div>
+</div>
+
+  </div>
 
 </body>
 

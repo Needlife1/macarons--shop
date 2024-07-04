@@ -186,8 +186,7 @@ meter {
 
 body {
     width: 100vw;
-    height: 100vh;
-    padding: 10px 10px;
+    /* height: 100vh; */
     background-color: #ffff;
     color: azure;
     font-family: 'Amatic SC', sans-serif;
@@ -298,8 +297,10 @@ button {
 
 .header {
     width: 100%;
+    height: 80px;
     background-color: var(--light-primary);
     position: sticky;
+    z-index: 2;
     top: 0;
     left: 0;
     display: flex;
@@ -310,7 +311,6 @@ button {
 
 .heder-to-main {
     color: var(--gray-primarily);
-
     width: 150px;
     height: 40px;
     border: 1px solid var(--accent-color);
@@ -342,6 +342,31 @@ button {
     }
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.animated-closing {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.closed {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
 .mochi {
     grid-area: Mochi;
 }
@@ -369,7 +394,7 @@ button {
 
 .contact {
     grid-area: Contacts;
-    background: var(--accent-color);
+    /* background: var(--accent-color); */
 
     @media (max-width: 768px) {
         display: none;
@@ -396,6 +421,10 @@ button {
 
 .thematic {
     grid-area: Thematic;
+}
+
+.nav {
+    padding: 10px 10px;
 }
 
 .nav-list {
@@ -462,6 +491,21 @@ button {
 
 .nav-link.hover:hover,
 .nav-link.hover:focus {
+    color: var(--dark-primary);
+    background-color: var(--light-primary);
+}
+
+#open-contacts {
+    background: var(--accent-color);
+    /* position: relative;
+    z-index: 1; */
+    width: 100%;
+    height: 100%;
+    transition: color 0.3s ease, background-color 1s ease;
+}
+
+#open-contacts:hover,
+#open-contacts:focus {
     color: var(--dark-primary);
     background-color: var(--light-primary);
 }
@@ -618,7 +662,31 @@ button {
 }
 
 .contacts {
-    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    text-align: center;
+    background-color: var(--light-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--dark-primary);
+    z-index: 6;
+    overflow-y: hidden;
+
+    @media (min-width:768px) {
+        border-radius: 30px;
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (min-width:1200px) {
+        width: 40%;
+        height: 60%;
+    }
 }
 
 .contacts-heder {
@@ -654,29 +722,62 @@ button {
     }
 }
 
-.visually-hidden {
+.contacts-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+
+    @media (min-width:768px) {
+        margin-top: 35px;
+    }
+
+    @media (min-width:1200px) {
+        margin-top: 25px;
+    }
 }
 
-.animated-closing {
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    opacity: 1;
-    transform: scale(1);
+.contacts-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width:768px) {
+        flex-direction: row;
+    }
 }
 
-.closed {
-    opacity: 0;
-    transform: scale(0.95);
-    pointer-events: none;
+.contacts-logo-img {
+    width: 95px;
+    height: 100px;
+
+}
+
+.contacts-logo-text {
+    font-size: 45px;
+}
+
+.contacts-phone {
+    display: flex;
+    align-items: center;
+
+    &>svg {
+        stroke: #f96d33;
+
+    }
+}
+
+.contact-text {
+    font-size: 15px;
 }
 
 .backdrop {
@@ -687,6 +788,10 @@ button {
     left: 0;
     background-color: var(--backdrop-bg);
     display: none;
+
+    @media (min-width:768px) {
+        z-index: 5;
+    }
 }
 
 .basket {
@@ -700,13 +805,12 @@ button {
     overflow-x: hidden;
 
     @media (min-width:768px) {
-        width: 80%;
-        height: 90%;
-        position: absolute;
+        width: 70%;
+        height: 80%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border-radius: 20px;
+        border-radius: 30px;
     }
 }
 
@@ -1141,4 +1245,99 @@ td {
 .product-card-svg {
     width: 25px;
     height: 25px;
+}
+
+.socail-media {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.socail-media li a {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    z-index: 9;
+    border: 1px solid var(--accent-color);
+}
+
+.socail-media li a svg {
+    width: 20px;
+    height: 20px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    filter: invert(100%) sepia(0%) saturate(7455%) hue-rotate(57deg) brightness(108%) contrast(105%);
+}
+
+.socail-media li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);
+    background-color: #fff;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.socail-media li a:hover::after {
+    animation: sideClip 0.5s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+}
+
+.socail-media li a:hover svg {
+    animation: fadeInLeft 0.3s linear both;
+    filter: invert(54%) sepia(69%) saturate(3942%) hue-rotate(352deg) brightness(97%) contrast(98%);
+}
+
+@keyframes sideClip {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);
+    }
+
+    50% {
+        clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.position-container {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    @media (min-width:768px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+    }
 }
