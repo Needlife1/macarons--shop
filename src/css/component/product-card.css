@@ -17,6 +17,9 @@
 }
 
 .product-img-box {
+    height: 200px;
+    width: 200px;
+    margin: 15px auto 0px;
     border-radius: 50%;
     overflow: hidden;
     object-fit: contain;
@@ -51,10 +54,10 @@
 
 .product-description {
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
 
     @media (min-width:768px) {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 

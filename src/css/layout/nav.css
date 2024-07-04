@@ -26,7 +26,6 @@
 
 .contact {
     grid-area: Contacts;
-    /* background: var(--accent-color); */
 
     @media (max-width: 768px) {
         display: none;
@@ -69,7 +68,7 @@
     @media (min-width: 768px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(6, 150px);
+        grid-template-rows: repeat(6, calc((100vh - 20px) / 6 - 8px));
         gap: 8px;
         grid-template-areas: "Logo Mochi Other"
             "Macarons Mochi Other"

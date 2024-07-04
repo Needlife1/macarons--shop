@@ -1,6 +1,5 @@
 .section {
     color: var(--dark-primary);
-    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -10,7 +9,7 @@
     text-align: center;
 
     @media (min-width:768px) {
-        font-size: 65px;
+        font-size: 55px;
         text-align: start;
         margin-left: 120px;
 
