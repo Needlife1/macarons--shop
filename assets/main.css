@@ -186,11 +186,14 @@ meter {
 
 body {
     width: 100vw;
-    /* height: 100vh; */
     background-color: #ffff;
     color: azure;
     font-family: 'Amatic SC', sans-serif;
     overflow-x: hidden;
+
+    @media(min-width:768px) {
+        height: 100vh;
+    }
 }
 
 button {
@@ -394,7 +397,6 @@ button {
 
 .contact {
     grid-area: Contacts;
-    /* background: var(--accent-color); */
 
     @media (max-width: 768px) {
         display: none;
@@ -436,7 +438,7 @@ button {
     @media (min-width: 768px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(6, 150px);
+        grid-template-rows: repeat(6, calc((100vh - 20px) / 6 - 8px));
         gap: 8px;
         grid-template-areas: "Logo Mochi Other"
             "Macarons Mochi Other"
@@ -581,8 +583,8 @@ button {
     margin-bottom: 15px;
 
     @media (min-width:768px) {
-        margin-top: 35px;
-        margin-bottom: 35px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         padding-left: 20px;
         text-align: start;
     }
@@ -627,7 +629,6 @@ button {
 
 .section {
     color: var(--dark-primary);
-    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -637,7 +638,7 @@ button {
     text-align: center;
 
     @media (min-width:768px) {
-        font-size: 65px;
+        font-size: 55px;
         text-align: start;
         margin-left: 120px;
 
@@ -1162,6 +1163,9 @@ td {
 }
 
 .product-img-box {
+    height: 200px;
+    width: 200px;
+    margin: 15px auto 0px;
     border-radius: 50%;
     overflow: hidden;
     -o-object-fit: contain;
@@ -1197,10 +1201,10 @@ td {
 
 .product-description {
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
 
     @media (min-width:768px) {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
