@@ -686,7 +686,7 @@ button {
 
     @media (min-width:1200px) {
         width: 40%;
-        height: 60%;
+        height: 70%;
     }
 }
 
@@ -770,11 +770,36 @@ button {
 .contacts-phone {
     display: flex;
     align-items: center;
+    transition: filter 0.3s ease;
+
+    @media (min-width:768px) {
+
+        &:hover,
+        &:focus {
+            filter: brightness(1.5);
+        }
+    }
+
 
     &>svg {
-        stroke: #f96d33;
+        stroke: var(--green-primarily);
 
     }
+
+
+}
+
+.contacts-address {
+    transition: color 0.3s ease;
+
+    @media (min-width:768px) {
+
+        &:hover,
+        &:focus {
+            color: var(--green-primarily);
+        }
+    }
+
 }
 
 .contact-text {
@@ -1172,9 +1197,12 @@ td {
        object-fit: contain;
     transition: transform 1.5s ease-out;
 
-    &:hover {
-        transform: scale(1.1);
+    @media (min-width:768px) {
+        &:hover {
+            transform: scale(1.1);
+        }
     }
+
 }
 
 .ptoduct-img {
@@ -1237,13 +1265,15 @@ td {
     @media (min-width:768px) {
         font-size: 28px;
         width: 250px;
+
+        &:hover {
+            background-color: var(--light-primary);
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+        }
     }
 
-    &:hover {
-        background-color: var(--light-primary);
-        color: var(--accent-color);
-        border: 1px solid var(--accent-color);
-    }
+
 }
 
 .product-card-svg {
