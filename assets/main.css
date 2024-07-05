@@ -299,6 +299,7 @@ button {
 }
 
 .header {
+    grid-area: header;
     width: 100%;
     height: 80px;
     background-color: var(--light-primary);
@@ -385,7 +386,7 @@ button {
 .video {
     grid-area: Video;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.9px) {
         display: none;
     }
 
@@ -398,8 +399,21 @@ button {
 .contact {
     grid-area: Contacts;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.9px) {
         display: none;
+    }
+}
+
+.video-second {
+    grid-area: video-second;
+
+    @media (max-width: 767.9px) {
+        display: none;
+    }
+
+    &>video {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -407,7 +421,7 @@ button {
     grid-area: Reviews;
     background: var(--accent-color-secondarily);
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.9px) {
         display: none;
     }
 }
@@ -416,7 +430,7 @@ button {
     grid-area: Info;
     background: var(--green-primarily);
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.9px) {
         display: none;
     }
 }
@@ -443,9 +457,9 @@ button {
         grid-template-areas: "Logo Mochi Other"
             "Macarons Mochi Other"
             "Macarons Video Contacts"
-            "Macarons Video Reviews"
+            "Macarons Video Info"
             "Macarons Thematic Thematic"
-            "Info Thematic Thematic";
+            "video-second Thematic Thematic";
     }
 
 }
@@ -465,8 +479,6 @@ button {
     align-items: center;
 
 }
-
-/* -------nav--------- */
 
 .nav-item {
     position: relative;
@@ -488,7 +500,10 @@ button {
 
 .nav-link:hover .nav-img,
 .nav-link:focus .nav-img {
-    transform: scale(1.1);
+    @media (min-width: 768px) {
+        transform: scale(1.1);
+    }
+
 }
 
 .nav-link.hover:hover,
@@ -566,10 +581,6 @@ button {
 
 .item-top {
     background: var(--accent-color);
-}
-
-.item-midel {
-    background: var(--green-primarily);
 }
 
 .item-bottom {
@@ -805,6 +816,148 @@ button {
 .contact-text {
     font-size: 15px;
 }
+
+.info-body {
+    display: grid;
+    grid-template-columns: 248px 1fr;
+    grid-template-rows: 68px 1fr;
+    grid-template-areas:
+        "header header"
+        "nuv main";
+    color: var(--dark-primary);
+}
+
+.info-nav {
+    grid-area: nuv;
+    height: 100vh;
+    width: 245px;
+    padding-top: 100px;
+    padding-left: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--gray-primarily);
+    background-color: var(--light-primary);
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.info-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.selected::before {
+    content: '';
+    width: 4px;
+    height: 30px;
+    display: block;
+    background-color: var(--accent-color);
+}
+
+.info-btn {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    transition: color 0.3s ease;
+
+    @media (min-width:768px) {
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+}
+
+.info-main {
+    grid-area: main;
+}
+
+.info-breadcrumbs {
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+/* ---------about------ */
+
+.about {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-text {
+    font-size: 18px;
+
+    @media (max-width:678px) {
+        font-size: 20px;
+
+    }
+}
+
+.about-img {
+    margin: 0 auto;
+}
+
+/* -------- delivery------*/
+
+.delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+    padding: 20px;
+
+    @media (min-width:678px) {
+        font-size: 20px;
+    }
+
+    & a {
+        font-weight: 700;
+    }
+
+    & span {
+        font-weight: 700;
+    }
+
+    & p {
+        margin-bottom: 7px;
+    }
+
+    & a:hover,
+    & a:focus {
+        color: var(--accent-color);
+    }
+
+    & ul>li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.delivery-title {
+    font-weight: 700;
+    font-size: 20px;
+
+    @media (min-width:678px) {
+        font-size: 22px;
+    }
+}
+
+/* ----- ----- */
+
+.clients {}
+
+.products {}
+
+.packaging {}
 
 .backdrop {
     width: 100vw;

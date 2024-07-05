@@ -78,17 +78,21 @@
 
       </li>
 
-      <li class="nav-item reviews">
 
-        <a class="nav-link hover" href="">
-          <p class="nav-text">відгуки</p>
-        </a>
+      <li class="nav-item video-second">
+
+        <video width="300" controls autoplay loop muted poster="path/to/poster.jpg">
+          <source src="path/to/video.mp4" type="video/mp4">
+          <source src="path/to/video.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+
 
       </li>
 
       <li class="nav-item info">
 
-        <a class="nav-link hover" href="">
+        <a class="nav-link hover" href="./info.html">
           <p class="nav-text">інформація</p>
         </a>
 
@@ -110,12 +114,9 @@
           <span>о</span>
           <span>н</span><span>т</span><span>а</span><span>к</span><span>т</span><span>и</span></button></li>
 
-      <li class="mob-nav-item item-bottom"><a class="mob-nav-link" href=""><span>і</span> <span>н</span>
+      <li class="mob-nav-item item-bottom"><a class="mob-nav-link" href="./info.html"><span>і</span> <span>н</span>
           <span>ф</span><span>о</span></a>
       </li>
-
-      <li class="mob-nav-item item-midel"><a class="mob-nav-link" href=""><span>в</span> <span>і</span>
-          <span>д</span><span>г</span><span>у</span><span>к</span><span>и</span></a></li>
 
     </ul>
 
@@ -128,6 +129,7 @@
   <div class="position-container">
 
     <div class="basket animated-closing closed visually-hidden">
+
 
   <div class="basket-heder">
 
@@ -153,11 +155,11 @@
     <table class="basket-table">
 
       <tbody>
-        <!-- <tr class="basket-table-item">
+        <tr class="basket-table-item">
           <td class="item-remove">
             <button class="item-remove-btn" type="button">
               <svg id="closeModal" viewBox="0 0 32 32" width="16" height="16">
-                <use href="./src/img/close.svg#icon-close"></use>
+                <use href="./assets/close.svg#icon-close"></use>
               </svg>
             </button>
           </td>
@@ -181,12 +183,12 @@
             <div class="quantity">
               <button class="decrease counter">
                 <svg width="12" height="12">
-                  <use href="./src/img/minus.svg#icon-minus"></use>
+                  <use href="./assets/minus.svg#icon-minus"></use>
                 </svg>
               </button>
               <div class="number counter">100</div>
               <button class="increase counter"><svg width="12" height="12">
-                  <use href="./src/img/plus.svg#icon-plus"></use>
+                  <use href="./assets/plus.svg#icon-plus"></use>
                 </svg>
               </button>
             </div>
@@ -196,7 +198,7 @@
             <span data-title="Сума"></span>
             <span class="subtotal">999грн</span>
           </td>
-        </tr> -->
+        </tr>
 
 
       </tbody>
@@ -211,6 +213,8 @@
     </div>
 
   </div>
+
+
 </div>
     <div class="contacts animated-closing closed visually-hidden">
     <div class="contacts-heder">
@@ -257,7 +261,7 @@
 
         <ul class="socail-media">
             <li>
-                <a href="#">
+                <a href="#" target="_blank" rel='nofollow noopener noreferrer'>
                     <svg width="20" height="20">
                         <use href="./assets/instagram.svg#instagram"></use>
                     </svg>
@@ -265,7 +269,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="#" target="_blank" rel='nofollow noopener noreferrer'>
                     <svg width="20" height="20">
                         <use href="./assets/telegram.svg#telegram"></use>
                     </svg>
@@ -273,7 +277,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="mailto:barbershop@email.com">
                     <svg width="20" height="20">
                         <use href="./assets/email.svg#email"></use>
                     </svg>
