@@ -13,7 +13,7 @@
 .video {
     grid-area: Video;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.9px) {
         display: none;
     }
 
@@ -27,8 +27,21 @@
 .contact {
     grid-area: Contacts;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.9px) {
         display: none;
+    }
+}
+
+.video-second {
+    grid-area: video-second;
+
+    @media (max-width: 767.9px) {
+        display: none;
+    }
+
+    &>video {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -36,7 +49,7 @@
     grid-area: Reviews;
     background: var(--accent-color-secondarily);
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.9px) {
         display: none;
     }
 }
@@ -45,7 +58,7 @@
     grid-area: Info;
     background: var(--green-primarily);
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.9px) {
         display: none;
     }
 }
@@ -73,9 +86,9 @@
         grid-template-areas: "Logo Mochi Other"
             "Macarons Mochi Other"
             "Macarons Video Contacts"
-            "Macarons Video Reviews"
+            "Macarons Video Info"
             "Macarons Thematic Thematic"
-            "Info Thematic Thematic";
+            "video-second Thematic Thematic";
     }
 
 }
@@ -97,8 +110,6 @@
 
 }
 
-
-/* -------nav--------- */
 .nav-item {
     position: relative;
     width: 100%;
@@ -119,7 +130,10 @@
 
 .nav-link:hover .nav-img,
 .nav-link:focus .nav-img {
-    transform: scale(1.1);
+    @media (min-width: 768px) {
+        transform: scale(1.1);
+    }
+
 }
 
 .nav-link.hover:hover,
@@ -198,10 +212,6 @@
 
 .item-top {
     background: var(--accent-color);
-}
-
-.item-midel {
-    background: var(--green-primarily);
 }
 
 .item-bottom {

@@ -1,0 +1,142 @@
+.info-body {
+    display: grid;
+    grid-template-columns: 248px 1fr;
+    grid-template-rows: 68px 1fr;
+    grid-template-areas:
+        "header header"
+        "nuv main";
+    color: var(--dark-primary);
+}
+
+.info-nav {
+    grid-area: nuv;
+    height: 100vh;
+    width: 245px;
+    padding-top: 100px;
+    padding-left: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--gray-primarily);
+    background-color: var(--light-primary);
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.info-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.selected::before {
+    content: '';
+    width: 4px;
+    height: 30px;
+    display: block;
+    background-color: var(--accent-color);
+}
+
+.info-btn {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    transition: color 0.3s ease;
+
+    @media (min-width:768px) {
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+}
+
+.info-main {
+    grid-area: main;
+}
+
+.info-breadcrumbs {
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+/* ---------about------ */
+.about {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-text {
+    font-size: 18px;
+
+    @media (max-width:678px) {
+        font-size: 20px;
+
+    }
+}
+
+.about-img {
+    margin: 0 auto;
+}
+
+/* -------- delivery------*/
+
+.delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+    padding: 20px;
+
+    @media (min-width:678px) {
+        font-size: 20px;
+    }
+
+    & a {
+        font-weight: 700;
+    }
+
+    & span {
+        font-weight: 700;
+    }
+
+    & p {
+        margin-bottom: 7px;
+    }
+
+    & a:hover,
+    & a:focus {
+        color: var(--accent-color);
+    }
+
+    & ul>li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.delivery-title {
+    font-weight: 700;
+    font-size: 20px;
+
+    @media (min-width:678px) {
+        font-size: 22px;
+    }
+}
+
+/* ----- ----- */
+
+.clients {}
+
+.products {}
+
+.packaging {}
