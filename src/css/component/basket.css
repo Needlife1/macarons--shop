@@ -1,15 +1,12 @@
 .backdrop {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     background-color: var(--backdrop-bg);
     display: none;
-
-    @media (min-width:768px) {
-        z-index: 5;
-    }
+    z-index: 5;
 }
 
 
@@ -22,15 +19,7 @@
     left: 0;
     color: var(--dark-primary);
     overflow-x: hidden;
-
-    @media (min-width:768px) {
-        width: 70%;
-        height: 80%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 30px;
-    }
+    z-index: 6;
 }
 
 .basket-img-cover {
@@ -185,7 +174,7 @@ td {
 
 .item-name {
     @media (min-width: 768px) {
-        font-size: 45px;
+        font-size: 35px;
     }
 }
 
@@ -204,11 +193,11 @@ td {
 
     @media (min-width: 768px) {
         &>span::before {
-            font-size: 50px;
+            font-size: 40px;
         }
 
         &>span {
-            font-size: 45px;
+            font-size: 35px;
         }
     }
 
@@ -230,11 +219,11 @@ td {
 
     @media (min-width: 768px) {
         &>span::before {
-            font-size: 50px;
+            font-size: 40px;
         }
 
         &>span {
-            font-size: 45px;
+            font-size: 35px;
         }
     }
 
@@ -291,10 +280,10 @@ td {
 
     @media (min-width: 768px) {
         &>span::before {
-            font-size: 50px;
+            font-size: 40px;
 
             &>span {
-                font-size: 45px;
+                font-size: 35px;
             }
         }
     }
@@ -302,7 +291,7 @@ td {
 
 .subtotal {
     @media (min-width: 768px) {
-        font-size: 45px;
+        font-size: 35px;
     }
 
 }

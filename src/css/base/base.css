@@ -1,14 +1,11 @@
 body {
-    width: 100vw;
     background-color: #ffff;
-    color: azure;
     font-family: 'Amatic SC', sans-serif;
     overflow-x: hidden;
 
-    @media(min-width:768px) {
-        height: 100vh;
-    }
 }
+
+
 
 button {
     cursor: pointer;
