@@ -32,13 +32,26 @@
     }
 }
 
-
 .contact {
     grid-area: Contacts;
+    background: var(--accent-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+
+
+    width: 100%;
+    height: 100%;
+    transition: color 0.3s ease, background-color 1s ease;
 
     @media (max-width: 767.9px) {
         display: none;
     }
+}
+
+.contact:hover,
+.contact:focus {
+    color: var(--dark-primary);
+    background-color: var(--light-primary);
 }
 
 .video-second {
@@ -66,6 +79,8 @@
 .info {
     grid-area: Info;
     background: var(--green-primarily);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
 
     @media (max-width: 767.9px) {
         display: none;
@@ -151,21 +166,6 @@
     background-color: var(--light-primary);
 }
 
-#open-contacts {
-    background: var(--accent-color);
-    /* position: relative;
-    z-index: 1; */
-    width: 100%;
-    height: 100%;
-    transition: color 0.3s ease, background-color 1s ease;
-}
-
-#open-contacts:hover,
-#open-contacts:focus {
-    color: var(--dark-primary);
-    background-color: var(--light-primary);
-}
-
 .nav-img {
     width: 100%;
     object-fit: cover;
@@ -221,8 +221,12 @@
 
 .item-top {
     background: var(--accent-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .item-bottom {
-    background: var(--accent-color-secondarily);
+    background-color: var(--green-primarily);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
 }

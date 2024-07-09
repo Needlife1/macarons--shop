@@ -12,8 +12,6 @@ export const positionContainer: HTMLElement | null = document.querySelector(
 export const body: HTMLElement | null = document.querySelector('body');
 
 basketBtn.forEach((el) => {
-  console.log(el);
-
   el?.addEventListener('click', toggleVisibilityBasket);
 });
 basketCloseBtn?.addEventListener('click', toggleVisibilityBasket);

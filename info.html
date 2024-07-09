@@ -14,17 +14,23 @@
 
     <nav class="info-nav">
         <ul class="info-list">
-            <li class="info-item"><button class="info-btn selected" type="menu">Про нас</button></li>
-            <li class="info-item"><button class="info-btn" type="menu">Оплата і доставка</button></li>
-            <li class="info-item"><button class="info-btn" type="menu">Оптовим клієнтам</button></li>
-            <li class="info-item"><button class="info-btn" type="menu">Про продукцію</button></li>
-            <li class="info-item"><button class="info-btn" type="menu">Пакування</button></li>
+            <li class="info-item"><button class="info-btn selected" id="about" type="menu">Про нас</button></li>
+            <li class="info-item"><button class="info-btn" id="delivery" type="menu">Оплата і доставка</button></li>
+            <li class="info-item"><button class="info-btn" id="clients" type="menu">Оптовим клієнтам</button></li>
+            <li class="info-item"><button class="info-btn" id="products" type="menu">Про продукцію</button></li>
+            <li class="info-item"><button class="info-btn" id="packaging" type="menu">Пакування</button></li>
         </ul>
     </nav>
 
     <button class="info-mob-btn" type="button" data-open-mob-nuv>
         <svg width="20" height="20">
             <use href="./src/img/burger-icon.svg#Capa_1"></use>
+        </svg>
+    </button>
+
+    <button class="info-mob-btn info-close-btn visually-hidden" type="button" data-close-mob-nuv>
+        <svg width="20" height="20">
+            <use href="./src/img/close.svg#icon-close"></use>
         </svg>
     </button>
 
@@ -40,7 +46,7 @@
 
         <h1 class="visually-hidden">Інформація про компанію Chervona panda</h1>
 
-        <section class="about info-section visually-hidden">
+        <section class="about info-section " id="about" data-name="Про нас">
 
             <h2 class="title">Про нас</h2>
             <p>Слово "Aimant" в перекладі з французької означає "люблячий", "ніжний", а ще "кохати"
@@ -78,7 +84,7 @@
 
         </section>
 
-        <section class="delivery info-section visually-hidden">
+        <section class="delivery info-section visually-hidden" id="delivery" data-name="Оплата і доставка">
 
             <h2 class="title">Оплата і доставка</h2>
             <h3 class="info-section-title">Замовлення:</h3>
@@ -159,7 +165,7 @@
             </div>
         </section>
 
-        <section class="clients info-section visually-hidden">
+        <section class="clients info-section visually-hidden" id="clients" data-name="Оптовим клієнтам">
 
             <h2 class="title">Оптовим клієнтам</h2>
             <P>Ми будемо раді виготовити для Ваших партнерів та клієнтів смачні, якісні та незабутні солодкі подарунки.
@@ -192,7 +198,7 @@
 
         </section>
 
-        <section class="products info-section visually-hidden">
+        <section class="products info-section visually-hidden" id="products" data-name="Продукція">
 
             <h2 class="title">Про продукцію</h2>
 
@@ -246,7 +252,7 @@
             <p>Бажаємо Вам нових солодких та смачних відкриттів!</p>
         </section>
 
-        <section class="packaging info-section">
+        <section class="packaging info-section visually-hidden" id="packaging" data-name="Пакування">
             <h2 class="title">Пакування для макаронс, шоколаду та цукерок</h2>
             <p>Сьогодні все складніше здивувати подарунком. Звичайно, дуже важливо, аби він був від щирого серця, однак
                 завжди хочеться

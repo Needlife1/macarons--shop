@@ -12,35 +12,41 @@
 }
 
 .info-nav {
-    /* grid-area: nuv;
-    height: 100vh;
-    width: 245px;
-    padding-top: 100px;
-    padding-left: 25px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: var(--gray-primarily);
-    background-color: var(--light-primary);
-    -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2); */
-
-    /* @media (max-width:767.9px) {
-        display: none;
-    } */
-
     height: 100vh;
     width: 100vw;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: var(--light-primary);
+    color: var(--gray-primarily);
 
+    @media (min-width:768px) {
+        grid-area: nuv;
+        width: 245px;
+        padding-top: 100px;
+        padding-left: 25px;
+        -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+    }
+
+
+}
+
+.info-list {
+    @media (max-width:768px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .info-mob-btn {
     position: fixed;
     left: 8px;
-    z-index: 20;
+    z-index: 4;
     width: 32px;
     height: 32px;
     display: flex;
