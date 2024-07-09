@@ -416,10 +416,24 @@ button {
 
 .contact {
     grid-area: Contacts;
+    background: var(--accent-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+
+
+    width: 100%;
+    height: 100%;
+    transition: color 0.3s ease, background-color 1s ease;
 
     @media (max-width: 767.9px) {
         display: none;
     }
+}
+
+.contact:hover,
+.contact:focus {
+    color: var(--dark-primary);
+    background-color: var(--light-primary);
 }
 
 .video-second {
@@ -447,6 +461,8 @@ button {
 .info {
     grid-area: Info;
     background: var(--green-primarily);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
 
     @media (max-width: 767.9px) {
         display: none;
@@ -530,21 +546,6 @@ button {
     background-color: var(--light-primary);
 }
 
-#open-contacts {
-    background: var(--accent-color);
-    /* position: relative;
-    z-index: 1; */
-    width: 100%;
-    height: 100%;
-    transition: color 0.3s ease, background-color 1s ease;
-}
-
-#open-contacts:hover,
-#open-contacts:focus {
-    color: var(--dark-primary);
-    background-color: var(--light-primary);
-}
-
 .nav-img {
     width: 100%;
     -o-object-fit: cover;
@@ -599,10 +600,14 @@ button {
 
 .item-top {
     background: var(--accent-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .item-bottom {
-    background: var(--accent-color-secondarily);
+    background-color: var(--green-primarily);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .breadcrumbs {
@@ -827,35 +832,39 @@ button {
 }
 
 .info-nav {
-    /* grid-area: nuv;
-    height: 100vh;
-    width: 245px;
-    padding-top: 100px;
-    padding-left: 25px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: var(--gray-primarily);
-    background-color: var(--light-primary);
-    -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
-    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2); */
-
-    /* @media (max-width:767.9px) {
-        display: none;
-    } */
-
     height: 100vh;
     width: 100vw;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: var(--light-primary);
+    color: var(--gray-primarily);
 
+    @media (min-width:768px) {
+        grid-area: nuv;
+        width: 245px;
+        padding-top: 100px;
+        padding-left: 25px;
+        box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+    }
+
+
+}
+
+.info-list {
+    @media (max-width:768px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .info-mob-btn {
     position: fixed;
     left: 8px;
-    z-index: 20;
+    z-index: 4;
     width: 32px;
     height: 32px;
     display: flex;
