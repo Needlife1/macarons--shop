@@ -2463,21 +2463,29 @@ async function getProductById(id) {
   const response = await axios.get(id);
   return response.data;
 }
+const STORAGE_KAY = "products";
+function addToLocalStorage(product) {
+  const saveProducts = localStorage.getItem(STORAGE_KAY);
+  const productsArray = saveProducts ? JSON.parse(saveProducts) : [];
+  console.log(productsArray);
+  productsArray.push(product);
+  localStorage.setItem(STORAGE_KAY, JSON.stringify(productsArray));
+}
 function addToBasket(e) {
   const path = window.location.pathname;
   const target = e.target;
   const productId = target ? target.id : null;
   if (path.includes("macarons") && productId) {
     getProductById(`api/macarons/${productId}`).then((prod) => {
-      console.log(prod);
+      addToLocalStorage(prod);
     });
   } else if (path.includes("other") && productId) {
     getProductById(`api/other/${productId}`).then((prod) => {
-      console.log(prod);
+      addToLocalStorage(prod);
     });
   } else if (path.includes("mochi") && productId) {
     getProductById(`api/mochi/${productId}`).then((prod) => {
-      console.log(prod);
+      addToLocalStorage(prod);
     });
   }
 }
