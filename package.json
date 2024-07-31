@@ -25,6 +25,7 @@
     "vite-plugin-imagemin": "^0.6.1"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "fast-glob": "^3.3.2",
     "vite-plugin-full-reload": "^1.1.0",
     "vite-plugin-html-inject": "^1.1.2"

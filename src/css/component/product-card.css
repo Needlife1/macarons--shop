@@ -101,10 +101,14 @@
         }
     }
 
+    &>span{
+        pointer-events: none;
+    }
 
 }
 
 .product-card-svg {
     width: 25px;
     height: 25px;
+    pointer-events: none;
 }

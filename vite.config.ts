@@ -25,7 +25,7 @@ export default defineConfig(({ command }) => {
         webp: { quality: 75 },
       }),
       injectHTML(),
-      FullReload(['./src/**/**.html', './src/**/*.css']),
+      FullReload(['./src/**/*.{html,css,js,ts}']),
     ],
     css: {
       postcss: postcssConfig,
@@ -48,5 +48,12 @@ export default defineConfig(({ command }) => {
         },
       },
     },
+
+    server: {
+      watch: {
+        usePolling: true, 
+      },
+    },
+
   };
 });
