@@ -74,7 +74,6 @@ function markupProducts(productsData:Products[]):string {
 
 function addEventToBtn(btns:NodeListOf<HTMLElement>) {
     btns.forEach(btn=>{
-        
         btn.addEventListener('click',addToBasket)
         
     })
